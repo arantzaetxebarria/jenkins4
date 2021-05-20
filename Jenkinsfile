@@ -1,18 +1,15 @@
 pipeline{
-	agent {
-		
-	 dockerfile{
-	 	filename 'Dockerfile'
- 	 }	
-	}
-	stages{
-		 stage{
-			  steps {
-			   sh 'uname-a'
-			   sh 'echo hola'
-			  }
-		 }
-	
-	}
-
+agent {
+dockerfile {
+filename 'Dockerfile'
+}
+}
+stages {
+stage('Prueba') {
+steps {
+sh 'uname -a'
+sh 'echo hola'
+}
+}
+}
 }
